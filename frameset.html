@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Topics/Clusters Comparator</title>
+<style type="text/css">
+iframe {border: 0; border-top: 1px solid #DDD;}
+.cluster {width: 570px; overflow-y: scroll;}
+.left {float: left;}
+</style>
+<script type="text/javascript">
+(function() {
+    document.addEventListener("DOMContentLoaded", init, false);
+    window.onresize = init;
+    function init() {
+        var height = document.documentElement.clientHeight - (document.documentElement.scrollTop + document.querySelector(".cluster").offsetTop + 1);
+        var elems = document.querySelectorAll(".cluster");
+
+        for (var i = 0; i < elems.length; i++) {
+            var elem = elems[i];
+            elem.style.height = (height)+"px";
+        }
+    }
+})();
+</script>
+</head>
+<body>
+<h1>Clustering of domains by mean page topic proportions</h1>
+<div class="clusters">
+    <!--
+    Your output from the clustering tool here.
+    e.g.
+    <iframe src="400k/clusters.01.30.40.html" class="cluster left"></iframe>
+    -->
+</div>
+</body></html>
